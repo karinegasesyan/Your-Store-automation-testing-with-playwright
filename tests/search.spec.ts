@@ -16,7 +16,7 @@ test.skip(
   "Skipping webkit tests",
 );
 
-test.describe.only("Search modul for all products", () => {
+test.describe("Search modul for all products", () => {
   const searchItems = ["Mac", "iPhone"];
 
   for (const term of searchItems) {
@@ -32,7 +32,7 @@ test.describe.only("Search modul for all products", () => {
   }
 });
 
-test.describe.only("Search module - Negative cases", () => {
+test.describe("Search module - Negative cases", () => {
   const invalidSearchTerms = ["123456", "abcdef", ""];
 
   for (const term of invalidSearchTerms) {
