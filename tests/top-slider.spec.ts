@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { BasePage } from "../pages/BasePage";
 import { TopSlider } from "../pages/TopSliderPage";
+import { BasePage } from "../pages/BasePage";
 
 let basePage: BasePage;
 let topSlider: TopSlider;
@@ -11,48 +11,24 @@ test.beforeEach(async ({ page }) => {
   await basePage.open();
 });
 
-test.describe.only("Testing top slider", () => {
-  const navigation = [
-    {
-      action: () => topSlider.clickNext(),
-      role: "img" as const,
-      name: "MacBookAir",
-    },
-    {
-      action: () => topSlider.clickPrev(),
-      role: "link" as const,
-      name: "iPhone",
-    },
-  ];
-
-  const slides = [
-    { index: 0, role: "link" as const, name: "iPhone" },
-    { index: 1, role: "img" as const, name: "MacBookAir" },
-  ];
-
+test.describe("Testing top slider", () => {
   test("Test if slider is visible", async ({ page }) => {
-    await topSlider.expectVisible();
+    await topSlider.expectSliderVisible();
   });
 
-  for (let i = 0; i < navigation.length; i++) {
-    const nav = navigation[i];
-    test(`Slider navigation test ${i + 1}`, async () => {
-      await nav.action();
-      await topSlider.expectSlide(nav.role, nav.name);
-    });
-  }
+  test("Test slider Next button functionality", async ({ page }) => {
+    await topSlider.clickNextWithCheck();
+  });
 
-  for (let i = 0; i < slides.length; i++) {
-    const slide = slides[i];
+  test("Test slider Previous button functionality", async ({ page }) => {
+    await topSlider.clickPrevWithCheck();
+  });
 
-    test(`Test slider indicators/dots ${i + 1} works`, async () => {
-      await topSlider.clickDot(slide.index);
-      await topSlider.expectSlide(slide.role, slide.name);
-    });
-  }
+  test("Test slider indicators/dots", async ({ page }) => {
+    await topSlider.clickDotAndCheck();
+  });
 
   test("Test first slider image link", async ({ page }) => {
-    await topSlider.clickProduct("iPhone");
-    await topSlider.verifySamsungGalaxyTabPage();
+    await topSlider.testFirstSliderImage();
   });
 });
