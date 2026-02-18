@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
   await basePage.open();
 });
 
-test.describe.only("Testing top slider", () => {
+test.describe("Testing top slider", () => {
   test("Test if slider is visible", async () => {
     await topSlider.expectSliderVisible();
   });

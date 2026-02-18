@@ -23,4 +23,17 @@ export class BasePage {
     );
     await expect(this.page).toHaveTitle("Account Login");
   }
+  async goToLoginPage() {
+    await this.page.goto(
+      "https://tutorialsninja.com/demo/index.php?route=account/login",
+    );
+    await expect(this.page).toHaveTitle("Account Login");
+  }
+
+  async expectHomePage() {
+    await expect(this.page).toHaveURL(
+      "https://tutorialsninja.com/demo/index.php?route=common/home",
+    );
+    await expect(this.page).toHaveTitle("Your Store");
+  }
 }
