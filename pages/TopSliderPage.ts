@@ -19,7 +19,7 @@ export class TopSlider {
     await this.page.locator(".swiper-button-prev").first().click();
   }
 
-  async expectMacBookAirVisible() {
+  async checkMacBookAirSlide() {
     await expect(
       this.page
         .locator(".swiper-viewport")
@@ -29,7 +29,7 @@ export class TopSlider {
     ).toBeVisible();
   }
 
-  async expectIphoneVisible() {
+  async checkIphoneSlide() {
     await expect(
       this.page
         .locator(".swiper-viewport")

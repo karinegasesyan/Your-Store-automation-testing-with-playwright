@@ -16,14 +16,16 @@ test.describe("Testing top slider", () => {
     await topSlider.expectSliderVisible();
   });
 
-  test("Test slider Next button functionality", async () => {
-    await topSlider.clickNext();
-    await topSlider.expectMacBookAirVisible();
-  });
+  test("Test slider button functionality", async () => {
+    const btnDir = "next";
 
-  test("Test slider Previous button functionality", async () => {
-    await topSlider.clickPrev();
-    await topSlider.expectIphoneVisible();
+    if (btnDir === "next") {
+      await topSlider.clickNext();
+      await topSlider.checkMacBookAirSlide();
+    } else {
+      await topSlider.clickPrev();
+      await topSlider.checkIphoneSlide();
+    }
   });
 
   test("Test slider indicators/dots", async () => {
