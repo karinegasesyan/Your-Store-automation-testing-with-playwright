@@ -19,7 +19,7 @@ test.skip(
   "Skipping wibkit in Windows",
 );
 
-test.describe.only("Login ", () => {
+test.describe("Login ", () => {
   test("Login with valid email and valid password", async ({ page }) => {
     await loginPageSec.login("karinegasesyan@gmail.com", "Mila2015");
 

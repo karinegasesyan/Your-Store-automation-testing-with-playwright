@@ -17,11 +17,13 @@ test.describe("Testing top slider", () => {
   });
 
   test("Test slider Next button functionality", async () => {
-    await topSlider.clickNextWithCheck();
+    await topSlider.clickNext();
+    await topSlider.expectMacBookAirVisible();
   });
 
   test("Test slider Previous button functionality", async () => {
-    await topSlider.clickPrevWithCheck();
+    await topSlider.clickPrev();
+    await topSlider.expectIphoneVisible();
   });
 
   test("Test slider indicators/dots", async () => {
