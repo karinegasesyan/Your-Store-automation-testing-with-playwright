@@ -20,11 +20,11 @@ This repository contains automated browser tests that simulate real user journey
 
 Key areas covered:
 
-- 🧪 User login and validation  
-- 🛒 Adding products to cart  
-- 🔍 Product search and filters  
-- 🧾 Checkout flow interaction  
-- 🔄 Navigation and UI assertions  
+- 🧪 User login and validation
+- 🛒 Adding products to cart
+- 🔍 Product search and filters
+- 🧾 Checkout flow interaction
+- 🔄 Navigation and UI assertions
 
 Playwright enables fast, cross‑browser automation and reliable test execution for modern web apps.:contentReference[oaicite:1]{index=1}
 
@@ -32,12 +32,12 @@ Playwright enables fast, cross‑browser automation and reliable test execution 
 
 ## 🛠 Tech Stack
 
-| Technology       | Purpose                          |
-|------------------|----------------------------------|
-| **Playwright**   | Browser automation & end‑to‑end testing |
-| **TypeScript**   | Strong typing & maintainable test code |
-| **Node.js**      | JavaScript runtime               |
-| **npm**          | Dependency management            |
+| Technology     | Purpose                                 |
+| -------------- | --------------------------------------- |
+| **Playwright** | Browser automation & end‑to‑end testing |
+| **TypeScript** | Strong typing & maintainable test code  |
+| **Node.js**    | JavaScript runtime                      |
+| **npm**        | Dependency management                   |
 
 ---
 
@@ -45,21 +45,22 @@ Playwright enables fast, cross‑browser automation and reliable test execution 
 
 ```
 Your-Store-automation-testing-with-playwright/
+├── .github/workflows/ # GitHub Actions workflows
 ├── tests/
-│   ├── login.spec.ts
-│   ├── cart.spec.ts
-│   ├── checkout.spec.ts
-│   └── navigation.spec.ts
+│ ├── login.spec.ts
+│ ├── cart.spec.ts
+│ ├── checkout.spec.ts
+│ └── navigation.spec.ts
 ├── pageObjects/
-│   ├── login.page.ts
-│   ├── products.page.ts
-│   └── cart.page.ts
+│ ├── login.page.ts
+│ ├── products.page.ts
+│ └── cart.page.ts
 ├── package.json
 ├── playwright.config.ts
 └── README.md
 ```
 
-> *Tip:* A **page object model (POM)** structure makes tests readable and maintainable as the suite grows.:contentReference[oaicite:2]{index=2}
+> _Tip:_ A **page object model (POM)** structure makes tests readable and maintainable as the suite grows.:contentReference[oaicite:2]{index=2}
 
 ---
 
@@ -123,23 +124,23 @@ npx playwright test --reporter=list
 
 ### 🔹 Login Tests
 
-- Validate homepage loads successfully  
-- User login with valid credentials  
+- Validate homepage loads successfully
+- User login with valid credentials
 - Login form error handling
 
 ### 🔹 Product & Cart Tests
 
-- Search for products  
-- Add products to cart  
+- Search for products
+- Add products to cart
 - Validate cart contents
 
 ### 🔹 Checkout / Navigation
 
-- Navigate through pages  
-- UI element validation  
+- Navigate through pages
+- UI element validation
 - Confirm button behaviours
 
-*(Adjust list above to match your actual tests)*
+_(Adjust list above to match your actual tests)_
 
 ---
 
@@ -160,8 +161,7 @@ These are real skills expected in QA automation roles.:contentReference[oaicite:
 ## 📫 Contact & Portfolio
 
 Karine Gasesyan — QA Automation Engineer  
-GitHub: https://github.com/karinegasesyan  
-
+GitHub: https://github.com/karinegasesyan
 
 ---
 
