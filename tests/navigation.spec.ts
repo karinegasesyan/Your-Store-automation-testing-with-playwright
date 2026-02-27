@@ -17,7 +17,7 @@ test.skip(
   "Skipping webkit tests",
 );
 
-test.describe("Desktops test", () => {
+test.describe("Desktops test @nav", () => {
   test("Test for PC", async ({ page }) => {
     await menuPage.clickSubMenu("Desktops", "PC (0)");
 

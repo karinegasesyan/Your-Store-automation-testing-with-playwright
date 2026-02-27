@@ -16,7 +16,7 @@ test.skip(
   "Skipping webkit tests",
 );
 
-test.describe("Search modul for all products", () => {
+test.describe("Search modul for all products @search", () => {
   const searchItems = ["Mac", "iPhone"];
 
   for (const term of searchItems) {
