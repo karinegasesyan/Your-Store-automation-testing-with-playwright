@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
   basePage = new BasePage(page);
   await basePage.open();
 });
-test.describe("Currency dropdown functionality @currency", () => {
+test.describe("@currency Currency dropdown functionality", () => {
   test("should allow the user to change currency from the dropdown", async ({
     page,
   }) => {
