@@ -12,7 +12,7 @@ on:
         type: choice
         options:
           - all
-          - menu
+          - nav
           - currency
           - search
         default: all
